@@ -1,0 +1,7 @@
+[icinga2]
+transport = "api"
+host = "localhost"
+port = "5665"
+username = "{{ salt['pillar.get']('icinga2:user_api:name') }}"
+password = "{{ salt['pillar.get']('icinga2:user_api:password') }}"
+

@@ -1,0 +1,11 @@
+/**
+ * The ApiUser objects are used for authentication against the API.
+ */
+
+object ApiUser "{{ salt['pillar.get']('icinga2:user_api:name') }}" {
+  password = "{{ salt['pillar.get']('icinga2:user_api:password') }}"
+  // client_cn = ""
+
+  permissions = [ "*" ]
+}
+

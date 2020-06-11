@@ -1,0 +1,4 @@
+[admins]
+users               = "{{ salt['pillar.get']('icinga2:user_web_admin:name') }}"
+permissions         = "*"
+

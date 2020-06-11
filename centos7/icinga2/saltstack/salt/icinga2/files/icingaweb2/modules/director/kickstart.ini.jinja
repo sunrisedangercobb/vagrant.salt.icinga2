@@ -1,0 +1,6 @@
+[config]
+endpoint = {{ grains['fqdn'] }}
+; host = 127.0.0.1
+; port = 5665
+username = "{{ salt['pillar.get']('icinga2:user_api:name') }}"
+password = "{{ salt['pillar.get']('icinga2:user_api:password') }}"

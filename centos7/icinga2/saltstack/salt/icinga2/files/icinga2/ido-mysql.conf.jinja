@@ -1,0 +1,12 @@
+/**
+ * The IdoMysqlConnection type implements MySQL support
+ * for DB IDO.
+ */
+
+object IdoMysqlConnection "ido-mysql" {
+  user = "{{ salt['pillar.get']('icinga2:user_db_icinga2:name') }}"
+  password = "{{ salt['pillar.get']('icinga2:user_db_icinga2:password') }}"
+  host = "{{ salt['pillar.get']('icinga2:target_host_db:fqdn') }}"
+  database = "{{ salt['pillar.get']('icinga2:schemas:icinga2:name') }}"
+}
+
